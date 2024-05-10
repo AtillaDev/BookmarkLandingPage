@@ -58,17 +58,18 @@ body {
 }
 .nav__menu {
   display: flex;
+  height: 100%;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   width: 83%;
 }
 .nav__menu-links {
   display: flex;
-  position: absolute;
+  padding-top: 6rem;
   flex-direction: column;
   align-items: center;
-  padding-top: 6rem;
-  width: 83%;
+  width: 100%;
 }
 .nav__menu-links a {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -94,6 +95,15 @@ body {
 .nav__menu-login a {
   padding: 0.5rem 0;
   font-weight: 500;
+}
+.nav__menu-icons {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.nav__menu-icons img {
+  height: 24px;
 }
 
 h1 {
