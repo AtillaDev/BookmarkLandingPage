@@ -33,6 +33,16 @@ body {
   justify-content: space-between;
   padding: 2rem;
 }
+@media (min-width: 376px) {
+  .nav {
+    padding-top: 3rem;
+    padding-left: 10.5rem;
+    padding-right: 10.5rem;
+  }
+}
+.nav__logo {
+  z-index: 2;
+}
 .nav__overlay {
   position: absolute;
   top: 0;
@@ -40,9 +50,6 @@ body {
   background-color: rgba(37, 43, 70, 0.9);
   width: 100vw;
   height: 100vh;
-}
-.nav__logo {
-  z-index: 2;
 }
 .nav__hamburger {
   z-index: 1;
@@ -104,6 +111,38 @@ body {
 }
 .nav__menu-icons img {
   height: 24px;
+}
+.nav__links {
+  display: none;
+}
+@media (min-width: 376px) {
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .nav__links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(229, 8%, 60%);
+  }
+  .nav__links a:hover {
+    color: hsl(0, 94%, 66%);
+    transition: all 0.2s linear;
+  }
+  .nav__links a:last-child {
+    background-color: hsl(0, 94%, 66%);
+    border-radius: 5px;
+    padding: 0.7rem 2.2rem;
+    color: #fff;
+  }
+  .nav__links a:last-child:hover {
+    background-color: #fff;
+    color: hsl(0, 94%, 66%);
+    outline: solid 3px hsl(0, 94%, 66%);
+    transition: all 0.2s linear;
+  }
 }
 
 h1 {

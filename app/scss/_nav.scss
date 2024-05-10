@@ -4,6 +4,17 @@
   justify-content: space-between;
   padding: 2rem;
 
+  @include desktop {
+    padding-top: 3rem;
+    padding-left: 10.5rem;
+    padding-right: 10.5rem;
+  }
+
+  &__logo {
+    z-index: 2;
+  }
+
+  // MOBILE
   &__overlay {
     position: absolute;
     top: 0;
@@ -12,15 +23,14 @@
     width: 100vw;
     height: 100vh;
   }
-  &__logo {
-    z-index: 2;
-  }
+
   &__hamburger {
     z-index: 1;
     border: 0;
     background: none;
     cursor: pointer;
     padding: 0;
+
     @include desktop {
       display: none;
     }
@@ -75,6 +85,43 @@
 
       img {
         height: 24px;
+      }
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      a {
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $grayishBlue;
+
+        &:hover {
+          color: $softRed;
+          transition: $transition;
+        }
+      }
+
+      a:last-child {
+        background-color: $softRed;
+        border-radius: 5px;
+
+        padding: 0.7rem 2.2rem;
+        color: #fff;
+
+        &:hover {
+          background-color: #fff;
+          color: $softRed;
+          outline: solid 3px $softRed;
+          transition: $transition;
+        }
       }
     }
   }
