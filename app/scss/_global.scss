@@ -33,8 +33,15 @@ body {
   top: 0;
   width: calc(100% - 4rem);
   // margin-top: 10rem;
+
+  @include desktop {
+    width: calc(100% - 21rem);
+  }
 }
 
 .sticky + .page-content {
   margin-top: 109px;
+  @include desktop {
+    margin-top: 129px;
+  }
 }

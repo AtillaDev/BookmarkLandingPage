@@ -4,12 +4,25 @@
   // justify-items: center;
   // align-items: center;
   padding-top: 2rem;
-  height: 200vh;
+  // height: 200vh;
+
+  @include desktop {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;
+  }
 
   &__illustration {
     position: relative;
     z-index: -10;
     // margin: 0 auto;
+
+    @include desktop {
+      width: 45%;
+
+      padding-right: 4rem;
+    }
 
     &-image {
       position: relative;
@@ -17,6 +30,11 @@
       width: calc(100% - 1rem);
       z-index: -1;
       // margin: 0 auto;
+
+      @include desktop {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     &-accent {
@@ -28,6 +46,14 @@
       height: 80%;
       width: 80%;
       background-color: $softBlue;
+
+      @include desktop {
+        top: 30%;
+        left: 30%;
+        height: 76%;
+        width: 70%;
+        border-radius: 0 0 0 35%;
+      }
     }
   }
 
@@ -41,10 +67,23 @@
     padding-right: 2.2rem;
     font-weight: 500;
 
+    @include desktop {
+      width: 35%;
+      text-align: left;
+      padding: 0;
+      padding-left: 10.5rem;
+    }
+
     &-tittle {
       color: $darkBlue;
       font-size: 1.8rem;
       line-height: 40px;
+
+      @include desktop {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 50px;
+      }
     }
 
     &-description {
@@ -52,6 +91,14 @@
       color: $grayishBlue;
       font-size: 0.9rem;
       line-height: 25px;
+
+      @include desktop {
+        padding-top: 2rem;
+        font-weight: 400;
+        line-height: 27px;
+        font-size: 1.1rem;
+        font-size: 400;
+      }
     }
 
     &-buttons {
@@ -59,11 +106,20 @@
       justify-content: space-between;
       padding-top: 2rem;
 
+      @include desktop {
+        justify-content: flex-start;
+        gap: 1rem;
+      }
+
       a {
         font-size: 0.9rem;
         padding: 1rem;
         border-radius: 5px;
         // background-color: $softBlue;
+
+        @include desktop {
+          padding: 1rem 1.5rem;
+        }
       }
 
       a:first-child {

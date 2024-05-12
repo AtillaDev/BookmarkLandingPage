@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 2.5rem 2rem;
   background-color: #fff;
+  // width: 100%;
 
   @include desktop {
     padding-top: 3rem;
@@ -60,8 +61,8 @@
         width: 100%;
         text-align: center;
         text-decoration: none;
-        letter-spacing: 2px;
         color: #fff;
+        letter-spacing: 2px;
         font-weight: 400;
       }
       a:nth-child(3) {
@@ -98,11 +99,11 @@
     @include desktop {
       display: flex;
       align-items: center;
-      gap: 3rem;
+      gap: 2.8rem;
 
       a {
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: 500;
         letter-spacing: 1px;
         color: $grayishBlue;
@@ -117,7 +118,7 @@
         background-color: $softRed;
         border-radius: 5px;
 
-        padding: 0.7rem 2.2rem;
+        padding: 0.8rem 2rem;
         color: #fff;
 
         &:hover {
