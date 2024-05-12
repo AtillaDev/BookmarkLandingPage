@@ -1,7 +1,80 @@
-h1 {
-  color: black;
+.hero {
+  display: flex;
+  flex-direction: column;
+  // justify-items: center;
+  // align-items: center;
+  padding-top: 2rem;
+  height: 200vh;
 
-  @include desktop {
-    color: red;
+  &__illustration {
+    position: relative;
+    z-index: -10;
+    // margin: 0 auto;
+
+    &-image {
+      position: relative;
+      padding: 0 0.5rem;
+      width: calc(100% - 1rem);
+      z-index: -1;
+      // margin: 0 auto;
+    }
+
+    &-accent {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      z-index: -2;
+      border-radius: 0 0 0 33%;
+      height: 80%;
+      width: 80%;
+      background-color: $softBlue;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 3rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    font-weight: 500;
+
+    &-tittle {
+      color: $darkBlue;
+      font-size: 1.8rem;
+      line-height: 40px;
+    }
+
+    &-description {
+      padding-top: 1rem;
+      color: $grayishBlue;
+      font-size: 0.9rem;
+      line-height: 25px;
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem;
+
+      a {
+        font-size: 0.9rem;
+        padding: 1rem;
+        border-radius: 5px;
+        // background-color: $softBlue;
+      }
+
+      a:first-child {
+        background-color: $softBlue;
+        color: #fff;
+      }
+
+      a:last-child {
+        background-color: rgba($color: $grayishBlue, $alpha: 0.1);
+        color: $grayishBlue;
+      }
+    }
   }
 }

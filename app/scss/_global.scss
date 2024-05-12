@@ -27,3 +27,14 @@ body {
 .not-visible {
   display: none;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 4rem);
+  // margin-top: 10rem;
+}
+
+.sticky + .page-content {
+  margin-top: 109px;
+}

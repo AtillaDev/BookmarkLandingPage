@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- <h1>Hello</h1> -->
-    <nav class="nav">
+    <nav id="nav" class="nav">
       <div id="navOverlay" class="nav__overlay not-visible">
         <div class="nav__menu">
           <div class="nav__menu-links">
@@ -56,7 +56,7 @@
         />
       </div>
 
-      <button class="nav__hamburger" id="menuBtn">
+      <div class="nav__hamburger" id="menuBtn">
         <img id="hamburgerBtn" src="/images/icon-hamburger.svg" alt="menu" />
         <img
           id="closeBtn"
@@ -64,7 +64,7 @@
           src="/images/icon-close.svg"
           alt="close"
         />
-      </button>
+      </div>
 
       <div class="nav__links">
         <a href="#">FEATURES</a>
@@ -74,6 +74,31 @@
       </div>
     </nav>
 
+    <div class="page-content">
+      <section class="hero">
+        <div class="hero__illustration">
+          <img
+            class="hero__illustration-image"
+            src="/images/illustration-hero.svg"
+            alt="illustration"
+          />
+          <div class="hero__illustration-accent"></div>
+        </div>
+
+        <div class="hero__text">
+          <h1 class="hero__text-tittle">A Simple Bookmark Manager</h1>
+          <p class="hero__text-description">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="hero__text-buttons">
+            <a>Get it on Chrome</a>
+            <a>Get it on Firefox</a>
+          </div>
+        </div>
+      </section>
+    </div>
     <script src="app/js/app.js"></script>
   </body>
 </html>
