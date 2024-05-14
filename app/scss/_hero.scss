@@ -106,7 +106,7 @@
       line-height: 25px;
 
       @include tablet {
-        font-weight: 400;
+        // font-weight: 400;
         font-size: 1rem;
       }
 
@@ -137,6 +137,8 @@
         font-size: 0.9rem;
         padding: 1rem 1rem;
         border-radius: 5px;
+
+        // transition: $transition;
         // background-color: $softBlue;
         -webkit-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.1);
@@ -144,12 +146,26 @@
 
         @include desktop {
           padding: 1rem 1.5rem;
+          cursor: pointer;
+
+          &:hover {
+            border: 2px solid $grayishBlue;
+            background-color: #fff !important;
+          }
         }
       }
 
       a:first-child {
         background-color: $softBlue;
         color: #fff;
+
+        @include desktop {
+          &:hover {
+            border: 2px solid $softBlue;
+            color: $softBlue;
+            background-color: #fff !important;
+          }
+        }
       }
 
       a:last-child {

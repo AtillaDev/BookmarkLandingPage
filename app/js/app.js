@@ -37,3 +37,23 @@ function navBehavior() {
 }
 
 window.addEventListener("scroll", navBehavior);
+
+const tabElement = document.getElementById("tabs");
+const tabs = tabElement.children;
+
+// console.log(Array.from(tabs));
+
+// console.log(tab);
+
+tabElement.addEventListener("click", (e) => {
+  // console.log("h");
+
+  if (e.target != tabElement) {
+    Array.from(tabs).forEach((child) => {
+      // console.log(child);
+      child.classList.remove("features__tabs-selected");
+    });
+    e.target.classList.add("features__tabs-selected");
+  }
+});
+// tabs.childNodes.forEach((child) => console.log(child));
